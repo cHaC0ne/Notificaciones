@@ -11,10 +11,10 @@
         android:id="@+id/bCustom"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="48dp"
+        android:layout_marginTop="96dp"
         android:layout_marginEnd="44dp"
-        android:onClick="myToastLayout"
         android:backgroundTint="@color/teal_200"
+        android:onClick="myToastLayout"
         android:text="Custom"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -24,9 +24,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
-        android:layout_marginTop="48dp"
-        android:onClick="myToast"
+        android:layout_marginTop="96dp"
         android:backgroundTint="@color/teal_200"
+        android:onClick="myToast"
         android:text="Toast"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -35,10 +35,10 @@
         android:id="@+id/bGravity"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="48dp"
-        android:layout_marginEnd="168dp"
-        android:onClick="myToastGravity"
+        android:layout_marginTop="96dp"
+        android:layout_marginEnd="164dp"
         android:backgroundTint="@color/teal_200"
+        android:onClick="myToastGravity"
         android:text="Gravity"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -47,32 +47,34 @@
         android:id="@+id/button4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="44dp"
-        android:layout_marginBottom="410dp"
+        android:layout_marginEnd="52dp"
+        android:layout_marginBottom="280dp"
         android:backgroundTint="@color/black"
-        android:text="Button"
+        android:text="Custom"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
 
     <Button
-        android:id="@+id/button5"
+        android:id="@+id/bSeleccionDialogo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="168dp"
-        android:layout_marginBottom="408dp"
-        android:text="Button"
+        android:layout_marginEnd="176dp"
+        android:layout_marginBottom="280dp"
         android:backgroundTint="@color/black"
+        android:onClick="selccionDialog"
+        android:text="Seleccion"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
 
     <Button
-        android:id="@+id/button6"
+        android:id="@+id/bAlertDialog"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
-        android:layout_marginBottom="410dp"
-        android:text="Button"
+        android:layout_marginStart="16dp"
+        android:layout_marginBottom="280dp"
         android:backgroundTint="@color/black"
+        android:onClick="alertDialog"
+        android:text="Alerta"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
@@ -80,11 +82,11 @@
         android:id="@+id/bSbCustom"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="156dp"
-        android:layout_marginEnd="44dp"
-        android:onClick="mySnackCustom"
-        android:text="SnCustom"
+        android:layout_marginTop="240dp"
+        android:layout_marginEnd="36dp"
         android:backgroundTint="@color/rojo"
+        android:onClick="mySnackCustom"
+        android:text="Custom"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -93,9 +95,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="148dp"
-        android:layout_marginTop="156dp"
-        android:onClick="snackColor"
+        android:layout_marginTop="240dp"
         android:backgroundTint="@color/rojo"
+        android:onClick="snackColor"
         android:text="SColor"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -105,9 +107,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
-        android:layout_marginTop="156dp"
-        android:onClick="mySnackBar"
+        android:layout_marginTop="240dp"
         android:backgroundTint="@color/rojo"
+        android:onClick="mySnackBar"
         android:text="SNACK"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -117,28 +119,28 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.16" />
+        app:layout_constraintGuide_percent="0.24" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_begin="235dp" />
+        app:layout_constraintGuide_begin="316dp" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_begin="385dp" />
+        app:layout_constraintGuide_begin="528dp" />
 
     <TextView
         android:id="@+id/TVtiTULO"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="184dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="188dp"
         android:text="TOAST"
         android:textColor="@color/black"
         android:textSize="20sp"
@@ -149,12 +151,24 @@
         android:id="@+id/tvTosSec"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="128dp"
-        android:layout_marginEnd="168dp"
+        android:layout_marginTop="180dp"
+        android:layout_marginEnd="164dp"
         android:text="SNACK BAR"
         android:textColor="@color/black"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="148dp"
+        android:layout_marginTop="324dp"
+        android:text="DIALOGOS"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
