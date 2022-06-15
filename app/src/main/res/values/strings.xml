@@ -2,4 +2,7 @@
     <string name="app_name">notificaciones</string>
     <string name="cancelar">CANCELAR</string>
     <string name="aceptar">ACEPTAR</string>
+    <string name="notificacionTitulo">NOTIFICACION</string>
+    <string name="notificacionContent">Este es mi ejemplo de notificacion</string>
+
 </resources>

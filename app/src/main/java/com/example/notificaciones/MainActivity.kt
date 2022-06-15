@@ -1,6 +1,14 @@
 package com.example.notificaciones
 
+import android.annotation.SuppressLint
+import android.app.Notification
+import android.app.NotificationChannel
+import android.app.NotificationManager
+import android.app.PendingIntent
+import android.content.Context
+import android.content.Intent
 import android.graphics.Color
+import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
@@ -9,16 +17,20 @@ import android.view.View
 import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
+import androidx.core.app.NotificationCompat
+import androidx.core.app.NotificationManagerCompat
 import androidx.core.content.ContextCompat
 import com.example.notificaciones.databinding.ActivityMainBinding
 import com.google.android.material.snackbar.Snackbar
 
 class MainActivity : AppCompatActivity() {
     private lateinit var b: ActivityMainBinding
+    private val CHANNEL_ID = "channel_id"
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         b = ActivityMainBinding.inflate(layoutInflater)
         setContentView(b.root)
+
 
     }
 
@@ -91,6 +103,45 @@ class MainActivity : AppCompatActivity() {
             .setNegativeButton(R.string.cancelar, null)
             .show()
     }
+    private fun createNotificationChannel() {
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+            val name = getString(R.string.notificacionTitulo)
+            val importance = NotificationManager.IMPORTANCE_DEFAULT
+
+            val channel = NotificationChannel(CHANNEL_ID, name, importance)
+            channel.description = getString(R.string.notificacionContent)
+
+            val notificationManager =
+                getSystemService(Context.NOTIFICATION_SERVICE) as NotificationManager
+            notificationManager.createNotificationChannel(channel)
+
+
+        }
+    }
+    @SuppressLint("UnspecifiedImmutableFlag")
+    fun notificacion(view: View) {
+        createNotificationChannel()
+
+
+        val builder =
+            NotificationCompat.Builder(this, CHANNEL_ID)
+                .setSmallIcon(R.drawable.icono_not)
+                .setContentTitle("EEEY")
+                .setContentText("Ejemplo de notificacion")
+                .setPriority(NotificationCompat.PRIORITY_DEFAULT)
+
+        val intent = Intent(this, ActividadResultado::class.java)
+        val pendingIntent =
+            PendingIntent.getActivity(this, 0, intent, PendingIntent.FLAG_UPDATE_CURRENT)
+        builder.setContentIntent(pendingIntent)
+
+
+        val NOTIF_ID = 1
+        val notificationManager = NotificationManagerCompat.from(this)
+        notificationManager.notify(NOTIF_ID, builder.build())
+    }
+
+
 
 
 }
