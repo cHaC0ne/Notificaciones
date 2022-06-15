@@ -11,7 +11,7 @@
         android:id="@+id/icon"
         android:layout_width="50dp"
         android:layout_height="50dp"
-        android:src="@mipmap/ic_launcher"
+        android:src="@drawable/alerta"
         app:srcCompat="@android:drawable/star_big_off" />
 
     <LinearLayout
