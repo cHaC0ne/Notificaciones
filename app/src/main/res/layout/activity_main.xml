@@ -12,7 +12,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="96dp"
-        android:layout_marginEnd="44dp"
+        android:layout_marginEnd="36dp"
         android:backgroundTint="@color/teal_200"
         android:onClick="myToastLayout"
         android:text="Custom"
@@ -44,12 +44,13 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/button4"
+        android:id="@+id/bCustomDialog"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="52dp"
+        android:layout_marginEnd="36dp"
         android:layout_marginBottom="280dp"
         android:backgroundTint="@color/black"
+        android:onClick="customDialog"
         android:text="Custom"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
@@ -58,7 +59,7 @@
         android:id="@+id/bSeleccionDialogo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="176dp"
+        android:layout_marginEnd="148dp"
         android:layout_marginBottom="280dp"
         android:backgroundTint="@color/black"
         android:onClick="selccionDialog"
@@ -70,7 +71,7 @@
         android:id="@+id/bAlertDialog"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
+        android:layout_marginStart="32dp"
         android:layout_marginBottom="280dp"
         android:backgroundTint="@color/black"
         android:onClick="alertDialog"

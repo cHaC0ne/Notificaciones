@@ -85,7 +85,11 @@ class MainActivity : AppCompatActivity() {
 
     fun customDialog(view: View){
         val inflater = this.layoutInflater
-        val custom_layout = inflater.inflate((R.layout.layout))
+        val custom_layout = inflater.inflate(R.layout.layout_dialog, null)
+        AlertDialog.Builder(this).setView(custom_layout)
+            .setPositiveButton(R.string.aceptar, null)
+            .setNegativeButton(R.string.cancelar, null)
+            .show()
     }
 
 
